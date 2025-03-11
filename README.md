@@ -1,8 +1,56 @@
-# FlexyDev - Next.js Portfolio Template
+# Flexy Dev - Next.js Portfolio Template
 
-![Next.js Portfolio Template](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/nextjs-dev-portfolio-template.png?updatedAt=1731588307541)
+![](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
+
+![](https://img.shields.io/badge/license-MIT-blue.svg)
+
+[![Premium Version](https://img.shields.io/badge/PREMIUM_%20VERSION-AVAILABLE-%2300C7B7?style=for-the-badge&logo=stellar&logoColor=white)](https://basit313.gumroad.com/l/nextjs-developer-portfolio-template)
+
+✨ **Professional Portfolio Template** built with Next.js 14 • 🚀 Tailwind CSS • 📱 Fully Responsive • 🎨 Modern Design • 🔍 SEO Friendly
+
+![Next.js Portfolio Template Hero Section](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Templates/flexy-dev-portfolio-hero-section.png?updatedAt=1741687009768)
+
+## 🚀 How to Run the Project
+
+Follow these steps to set up and run the project locally:
+
+### 1️⃣ Install Dependencies
+
+After downloading/cloning the project, navigate to the project directory and run:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+This will install all required dependencies.
+
+### 2️⃣ Start the Development Server
+
+Once the installation is complete, start the server with:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Your portfolio will now be running at `http://localhost:3000`.
+
+### ⚠️ Important: Set Up Environment Variables
+
+Before running the project, make sure to create a `.env.local` file in the root directory and add the following:
+
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+This ensures proper configuration of environment variables.
 
 ## Folder Structure Overview
+
+![Next.js portfolio template folder structure overview](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Templates/Folder%20Structure%20Overview.png?updatedAt=1741684501824)
 
 - **content:** Contains data for projects. Add any additional section data here.
 - **Components:** All the UI components of app e.g. navbar, hero, projects, footer etc
@@ -14,16 +62,6 @@
 - **appData:** Includes app data, such as services and skills (including icons).
 - **app/page.tsx:** Root file of the app.
 - **app/layout.tsx:** Manages global and SEO configurations (e.g., fonts, head tags, analytics).
-
-## How to run a project?
-
-- After downloading the project, run npm install (or npm i) in the project directory to install dependencies.
-- Once dependencies are installed, start the server by running npm run dev.
-
-### Remember (Add .env file)
-
-Add this line in .env.local file
-`NEXT_PUBLIC_SITE_URL=http://localhost:3000`
 
 ## Customizing the Template
 
@@ -47,13 +85,15 @@ Add this line in .env.local file
    - Location: Visit [Flexy UI](http://flexyui.com/)
      - You can replace the default footer or choose from additional variants [from Flexy UI](http://flexyui.com/) (simple or column footer).
 
+![Project section](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Templates/flexy-dev-portfolio-portfolio.png?updatedAt=1739182152345)
+
 ## Configuring Online Images
 
 To display online images (e.g., from a CDN) in your deployed project, configure allowed image hostnames in next.config.js.
 
 For demo purposes, we’re using Unsplash images. You can use any image host, but be sure to add the hostname in your configuration.
 
-Replace 'unsplash' with your own image `hostnames` if using a different service.
+Replace 'unsplash' with your own image `hostnames` if using a different service or add a new object.
 
 ## Theming and Styling
 
@@ -68,9 +108,40 @@ We use Tailwind CSS for styling. In tailwind.config.ts, you can customize theme 
    - Replace `opengraph-image.png` and `twitter-image.png `with custom images.
    - Alternatively, edit `opengraph-image.tsx` to generate images dynamically.
 
-## Premium Portfolio Template
+### If you find this template helpful, don't forget to ⭐️ the repo!
 
-The premium version of FlexyDev includes a Blog feature. You can write blogs in Markdown (.MDX) format, which also supports code snippets. You can find [more details here](https://basit313.gumroad.com/l/nextjs-developer-portfolio-template).
+## 💎 Upgrade to Premium
+
+✨ **Premium Features Include:**
+
+- 🎨 **Advanced Theme System**  
+  Switch or choose 4 built-in themes:  
+  `Dark` | `Light` | `Retro` | `Aqua`
+
+  [+] Create custom themes with CSS variables
+
+- 📝 MDX Blog System with Categories/Tags
+- 💬 Interactive Testimonials Section
+- 📩 Contact Form with Formspree Integration
+- 🖥️ Premium Footer Design
+- 🚨 Priority Email Support
+- 🔄 Regular Feature Updates
+
+[Get Premium Version](https://basit313.gumroad.com/l/nextjs-developer-portfolio-template) | [View Premium Demo](https://nextjs-dev-portfolio.netlify.app/)
+
+## 🆓 vs 💎 Premium
+
+| **Feature**          | **Free Version** | **Premium Version**      |
+| -------------------- | ---------------- | ------------------------ |
+| Blog System (MDX)    | ❌               | ✅ Full Integration      |
+| Testimonials Section | ❌               | ✅ Interactive           |
+| Contact Form         | ❌               | ✅ Functional Premium UI |
+| Footer Design        | Standard         | ✅ Premium UI            |
+| Theme Options        | Dark Theme       | ✅ 4+Custom              |
+| UI Components        | 10               | 25+                      |
+| Email Support        | ✅               | ✅ Priority              |
+
+![services and footer section](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Templates/flexy-dev-marquee-and-footer.png?updatedAt=1739182152260)
 
 ## Analytics
 
@@ -83,7 +154,7 @@ You can integrate analytics easily:
 
 Before deploying, add environment variables from .env.local wherever you are deploying:
 
-1. NEXT_PUBLIC_SITE \_URL: Set to your actual site URL (e.g., https://johndoe.com).
+1. NEXT_PUBLIC_SITE_URL: Set to your actual site URL (e.g., https://johndoe.com).
 2. For local development, use the localhost URL.
 
 For any query or suggestion, I am available on [LinkedIn](https://www.linkedin.com/in/abdulbasitprofile/) or email me at basit@codevertiser.com
