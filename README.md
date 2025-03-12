@@ -6,7 +6,7 @@
 
 [![Premium Version](https://img.shields.io/badge/PREMIUM_%20VERSION-AVAILABLE-%2300C7B7?style=for-the-badge&logo=stellar&logoColor=white)](https://basit313.gumroad.com/l/nextjs-developer-portfolio-template)
 
-✨ **Professional Portfolio Template** built with Next.js 14 • 🚀 Tailwind CSS • 📱 Fully Responsive • 🎨 Modern Design • 🔍 SEO Friendly
+✨ **Professional Portfolio Template** built with Next.js 15 • 🚀 Tailwind CSS • 📱 Fully Responsive • 🎨 Modern Design • 🔍 SEO Friendly
 
 ![Next.js Portfolio Template Hero Section](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Templates/flexy-dev-portfolio-hero-section.png?updatedAt=1741687009768)
 
