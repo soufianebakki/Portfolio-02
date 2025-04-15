@@ -6,9 +6,9 @@
 
 [![Premium Version](https://img.shields.io/badge/PREMIUM_%20VERSION-AVAILABLE-%2300C7B7?style=for-the-badge&logo=stellar&logoColor=white)](https://basit313.gumroad.com/l/nextjs-developer-portfolio-template)
 
-✨ **Professional Portfolio Template** built with Next.js 15 • 🚀 Tailwind CSS • 📱 Fully Responsive • 🎨 Modern Design • 🔍 SEO Friendly
+✨ **Professional Portfolio Template** built with Next.js 15 • 🚀 Tailwind V4 • 📱 Fully Responsive • 🎨 Modern Design • 🔍 SEO Friendly
 
-![Next.js Portfolio Template Hero Section](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Templates/flexy-dev-portfolio-hero-section.png?updatedAt=1741687009768)
+![Next.js Portfolio Template Hero Section](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Templates/Flexy%20Dev%20Cover%20New.png?updatedAt=1741812978958)
 
 ## 🚀 How to Run the Project
 
@@ -54,7 +54,7 @@ This ensures proper configuration of environment variables.
 
 - **content:** Contains data for projects. Add any additional section data here.
 - **Components:** All the UI components of app e.g. navbar, hero, projects, footer etc
-- **src/services:** Retrieves data (e.g., projects) using the fs module. Update this file if you change or modify the data source.
+- **src/services:** Retrieves data (e.g., projects, testimonials) using the fs module. Update this file if you change or modify the data source.
 - **src/assets:** Stores all assets, including images and icons, additionally you can add audio, video, and local fonts here.
 - **src/hooks:** Holds custom hooks.
 - **src/lib/types.d.ts:** Contains TypeScript types.
@@ -85,7 +85,25 @@ This ensures proper configuration of environment variables.
    - Location: Visit [Flexy UI](http://flexyui.com/)
      - You can replace the default footer or choose from additional variants [from Flexy UI](http://flexyui.com/) (simple or column footer).
 
+In the same manner, you can also update the Contact and Testimonial sections. The code is self-explanatory.
+
 ![Project section](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Templates/flexy-dev-portfolio-portfolio.png?updatedAt=1739182152345)
+
+## 📨 Configuring the Contact Section
+
+To integrate **Formspree** into your contact form, follow these simple steps:
+
+1. Go to the [Formspree website](https://formspree.io/) and create a new project.
+2. Add a new form (you'll get a unique form endpoint URL).
+3. Copy the form endpoint and paste it into your `.env.local` file like this:
+
+```env
+CONTACT_FORM_ACTION_URL=https://formspree.io/f/your-form-id
+```
+
+> Note: This URL is just an endpoint to receive your form submissions. You can use any service of your choice (like Formcarry, Getform, or your own API) if you're not using Formspree.
+
+Make sure the name attributes in your form match what your form handler or service expects (e.g., `name`, `email`, `subject`, `message`).
 
 ## Configuring Online Images
 
@@ -97,7 +115,7 @@ Replace 'unsplash' with your own image `hostnames` if using a different service 
 
 ## Theming and Styling
 
-We use Tailwind CSS for styling. In tailwind.config.ts, you can customize theme settings such as fonts, colors, and animations.
+We use Tailwind CSS for styling. In `global.css`, you can customize theme variables for all 3 themes.
 
 ## SEO & Branding
 
@@ -114,34 +132,23 @@ We use Tailwind CSS for styling. In tailwind.config.ts, you can customize theme 
 
 ✨ **Premium Features Include:**
 
-- 🎨 **Advanced Theme System**  
-  Switch or choose 4 built-in themes:  
-  `Dark` | `Light` | `Retro` | `Aqua`
+- 🎨 **Advanced Theme System**
 
-  [+] Create custom themes with CSS variables
+In premium template you will get one extra feature
 
-- 📝 MDX Blog System with Categories/Tags
-- 💬 Interactive Testimonials Section
-- 📩 Contact Form with Formspree Integration
-- 🖥️ Premium Footer Design
-- 🚨 Priority Email Support
-- 🔄 Regular Feature Updates
+- 📝 MDX Blog System with code snippets
 
 [Get Premium Version](https://basit313.gumroad.com/l/nextjs-developer-portfolio-template) | [View Premium Demo](https://nextjs-dev-portfolio.netlify.app/)
 
 ## 🆓 vs 💎 Premium
 
-| **Feature**          | **Free Version** | **Premium Version**      |
-| -------------------- | ---------------- | ------------------------ |
-| Blog System (MDX)    | ❌               | ✅ Full Integration      |
-| Testimonials Section | ❌               | ✅ Interactive           |
-| Contact Form         | ❌               | ✅ Functional Premium UI |
-| Footer Design        | Standard         | ✅ Premium UI            |
-| Theme Options        | Dark Theme       | ✅ 4+Custom              |
-| UI Components        | 10               | 25+                      |
-| Email Support        | ✅               | ✅ Priority              |
+| **Feature**       | **Free Version** | **Premium Version** |
+| ----------------- | ---------------- | ------------------- |
+| Blog System (MDX) | ❌               | ✅ Full Integration |
+| UI Components     | 20               | 25+                 |
+| Email Support     | ✅               | ✅ Priority         |
 
-![services and footer section](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Templates/flexy-dev-marquee-and-footer.png?updatedAt=1739182152260)
+![footer section](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Templates/flexy-dev-footer.png?updatedAt=1741813601842)
 
 ## Analytics
 
@@ -155,6 +162,7 @@ You can integrate analytics easily:
 Before deploying, add environment variables from .env.local wherever you are deploying:
 
 1. NEXT_PUBLIC_SITE_URL: Set to your actual site URL (e.g., https://johndoe.com).
-2. For local development, use the localhost URL.
+1. CONTACT_FORM_ACTION_URL: Your [formspree](https://formspree.io/) url.
+1. For local development, use the localhost URL.
 
 For any query or suggestion, I am available on [LinkedIn](https://www.linkedin.com/in/abdulbasitprofile/) or email me at basit@codevertiser.com

@@ -2,11 +2,11 @@
 
 const action = async (_: { success: boolean; message: string } | null, formData: FormData) => {
   try {
-    const fullname = formData.get('fullname')
-    if (!fullname)
+    const name = formData.get('name')
+    if (!name)
       return {
         success: false,
-        message: 'Please provide your full name.',
+        message: 'Please provide your name.',
       }
 
     const email = formData.get('email')
@@ -14,6 +14,13 @@ const action = async (_: { success: boolean; message: string } | null, formData:
       return {
         success: false,
         message: 'Please provide your email address.',
+      }
+
+    const subject = formData.get('subject')
+    if (!subject)
+      return {
+        success: false,
+        message: 'Please provide a subject.',
       }
 
     const message = formData.get('message')

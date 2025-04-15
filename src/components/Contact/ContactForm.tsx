@@ -17,13 +17,7 @@ const ContactForm = () => {
 
   return (
     <form action={formAction}>
-      <Input
-        label="Full name"
-        id="fullname"
-        name="fullname"
-        placeholder="Your name here"
-        required
-      />
+      <Input label="Full name" id="name" name="name" placeholder="Your name here" required />
       <Input
         label="Email address"
         id="email"
