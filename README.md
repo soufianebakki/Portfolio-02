@@ -132,8 +132,6 @@ We use Tailwind CSS for styling. In `global.css`, you can customize theme variab
 
 ✨ **Premium Features Include:**
 
-- 🎨 **Advanced Theme System**
-
 In premium template you will get one extra feature
 
 - 📝 MDX Blog System with code snippets
