@@ -19,3 +19,12 @@ export interface Heading {
   title: string
   items: Heading[]
 }
+
+export interface Testimonial {
+  name: string
+  title?: string
+  feedback: string
+  image: string
+  stars: number
+  createdAt: string
+}

@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import { Earning, GithubDark, Likes, Preview, Star, Timer } from '../../utils/icons'
 import { Project } from '@/lib/types'
+import Image from 'next/image'
+import { Earning, GithubIcon, Likes, PreviewIcon, Star, Timer } from '../../utils/icons'
 
 const IconText: React.FC<{ icon: string; text: string }> = ({ icon, text }) => (
   <li className="flex gap-2">
     <Image src={icon} alt={text} className="size-[18px] md:size-5" />
-    <span className="text-sm">{text}</span>
+    <span className="text-neutral text-sm">{text}</span>
   </li>
 )
 
@@ -30,14 +30,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
   } = data
 
   return (
-    <div className="flex flex-col justify-between rounded-[14px] border border-[#1E2D3D] bg-secondary p-5">
+    <div className="bg-secondary border-border flex flex-col justify-between rounded-[14px] border p-5">
       <div className="flex items-start justify-between gap-2">
         <div className="flex-1">
           <div className="flex flex-col flex-wrap gap-3 sm:flex-row sm:items-center">
-            <h3 className="text-lg font-medium text-indigo md:font-semibold">{title}</h3>
+            <h3 className="text-secondary-content text-lg font-medium md:font-semibold">{title}</h3>
             {type && (
               <span
-                className={`h-7 w-fit rounded-md bg-[#FFFFFF1A] p-1 text-sm ${type === 'New 🔥' ? 'animate-blink text-[#FFA800]' : 'text-mint'} backdrop-blur-[80px]`}>
+                className={`h-7 w-fit rounded-md bg-[#FFFFFF1A] p-1 text-sm ${type === 'New 🔥' ? 'animate-blink text-tag' : 'text-accent'} backdrop-blur-[80px]`}>
                 {type}
               </span>
             )}
@@ -65,25 +65,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
       </div>
 
       <div>
-        <div className="my-4 h-[100px] overflow-scroll rounded-2xl bg-primary px-4 py-2 text-primary">
+        <div className="bg-primary text-primary-content my-4 h-[100px] overflow-scroll rounded-2xl px-4 py-2">
           <p className="text-[14px] font-normal md:text-base">{shortDescription}</p>
         </div>
         <div className="flex gap-5">
           {livePreview && (
             <a
               href={livePreview}
-              className="flex gap-2 text-sm text-mint underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 md:text-base"
+              className="text-accent flex gap-2 text-sm underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 md:text-base"
               target="_blank">
-              <Image src={Preview} alt="view icon" className="h-auto w-[18px] md:w-5" />
+              <PreviewIcon className="h-auto w-[18px] md:w-5" />
               <span>Live Preview</span>
             </a>
           )}
           {githubLink && (
             <a
               href={githubLink}
-              className="flex gap-2 text-sm text-mint underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 md:text-base"
+              className="text-accent flex gap-2 text-sm underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 md:text-base"
               target="_blank">
-              <Image src={GithubDark} alt="github icon" className="w-[18px] md:w-5" />
+              <GithubIcon className="w-[18px] md:w-5" />
               <span>Github Link</span>
             </a>
           )}

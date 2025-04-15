@@ -1,13 +1,14 @@
 interface SectionHeadingTypes {
   title: string
   subtitle?: string
+  className?: string
 }
 
-const SectionHeading: React.FC<SectionHeadingTypes> = ({ title, subtitle }) => {
+const SectionHeading: React.FC<SectionHeadingTypes> = ({ title, subtitle, className }) => {
   return (
-    <div className="lg:max-w-[50dvw]">
-      <h2 className="text-2xl font-bold tracking-wider text-primary">{title}</h2>
-      {subtitle && <p className="mt-5 text-pretty text-lg text-gray-400">{subtitle}</p>}
+    <div className={`lg:max-w-[50dvw] ${className}`}>
+      <h2 className="text-primary-content text-2xl font-bold tracking-wider">{title}</h2>
+      {subtitle && <p className="text-tertiary-content mt-5 text-lg text-pretty">{subtitle}</p>}
     </div>
   )
 }

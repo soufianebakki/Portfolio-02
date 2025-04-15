@@ -1,9 +1,10 @@
 'use client'
-import Image from 'next/image'
+
 import Link from 'next/link'
-import { useState } from 'react'
-import { BurgerIcon, CloseIcon, Logo } from '../../utils/icons'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
+import { BurgerIcon, CloseIcon } from '../../utils/icons'
+import Logo from './Logo'
 
 const navItems = [
   {
@@ -33,15 +34,15 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="h-16 w-dvw overflow-hidden border-b border-[#2B3E6E] bg-primary">
+    <nav className="bg-primary border-border h-16 overflow-hidden border-b">
       <div className="mx-auto flex h-full w-dvw max-w-[1200px] items-center justify-between px-4 py-1">
         {isVisible ? (
-          <div className="md:hidden">_menu</div>
+          <div className="text-primary-content md:hidden">_menu</div>
         ) : (
           <Link href="/">
-            <div className="relative flex animate-fade-up items-center gap-3 transition-all duration-300 md:static">
-              <Image src={Logo} alt="logo" className="h-8 w-10" />
-              <span className="text-primary">john_doe</span>
+            <div className="animate-fade-up text-primary-content relative flex items-center gap-3 transition-all duration-300 md:static">
+              <Logo />
+              <span className="text-primary-content">john_doe</span>
             </div>
           </Link>
         )}
@@ -49,23 +50,23 @@ const Navbar = () => {
         <div className="md:hidden">
           <button onClick={toggleMenu}>
             {isVisible ? (
-              <Image src={CloseIcon} alt="close-icon" />
+              <CloseIcon className="text-primary-content" />
             ) : (
-              <Image src={BurgerIcon} alt="menu-icon" />
+              <BurgerIcon className="text-primary-content" />
             )}
           </button>
         </div>
 
         <ul
-          className={`${isVisible ? 'flex' : 'hidden'} absolute left-0 top-16 z-10 h-dvh w-dvw animate-fade-in flex-col bg-primary md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[70%]`}>
+          className={`${isVisible ? 'flex' : 'hidden'} animate-fade-in bg-primary absolute top-16 left-0 z-10 h-dvh w-dvw flex-col md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[70%]`}>
           {navItems.map(({ label, href }) => (
             <li
               key={href}
               onClick={() => setIsVisible(false)}
-              className="flex items-center border-b border-[#2B3E6E] px-4 text-2xl md:border-y-0 md:border-e md:text-base md:first:border-s md:last:ml-auto md:last:border-none md:last:px-0 lg:px-8">
+              className="border-border flex items-center border-b px-4 text-2xl md:border-y-0 md:border-e md:text-base md:first:border-s md:last:ml-auto md:last:border-none md:last:px-0 lg:px-8">
               <Link
                 href={href}
-                className={`w-full py-7 text-primary transition-all duration-150 hover:text-white md:py-0 ${pathname === href ? 'cursor-text text-white' : ''}`}>
+                className={`text-primary-content hover:text-neutral w-full py-7 transition-all duration-150 md:py-0 ${pathname === href ? 'text-neutral cursor-text' : ''}`}>
                 {label}
               </Link>
             </li>

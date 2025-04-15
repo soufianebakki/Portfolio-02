@@ -10,12 +10,12 @@ type SkillsProps = {
 
 const Skills: React.FC<SkillsProps> = ({ skills }) => {
   return (
-    <MarqueeWrapper className="bg-gradient-to-r from-[#011627] via-[#062B48] to-[#011627]">
+    <MarqueeWrapper className="from-primary to-primary via-marquee bg-linear-to-r">
       <div className="flex gap-8 lg:gap-24">
         {skills.map(({ name, icon }, index) => (
           <span
             key={index}
-            className="flex items-center font-inter text-xs text-primary lg:text-base">
+            className="font-inter text-primary-content flex items-center text-xs lg:text-base">
             <Image src={icon} alt={name} className="mx-2 size-11 lg:size-14" />
             {name}
           </span>

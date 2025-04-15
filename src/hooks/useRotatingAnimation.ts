@@ -10,8 +10,8 @@ function useRotatingAnimation({
   initialAngle = 0,
   rotationStep = 30,
   interval = 1500,
-}: RotatingAnimationOptions = {}): React.RefObject<HTMLImageElement> {
-  const ellipseRef = useRef<HTMLImageElement | null>(null)
+}: RotatingAnimationOptions = {}): React.RefObject<SVGSVGElement> {
+  const ellipseRef = useRef<SVGSVGElement>(null)
   const ellipseAngle = useRef<number>(initialAngle)
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function useRotatingAnimation({
     }
   }, [rotationStep, interval])
 
-  return ellipseRef as React.RefObject<HTMLImageElement>
+  return ellipseRef as React.RefObject<SVGSVGElement>
 }
 
 export default useRotatingAnimation
