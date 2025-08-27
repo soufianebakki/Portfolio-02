@@ -13,20 +13,34 @@ const title = 'John Doe | Full-Stack Web Developer in Chicago'
 const description =
   "Skilled full-stack web developer in Chicago. I build responsive, user-friendly websites with React, NextJS, and NodeJS. Let's bring your vision to life. Hire me today!"
 
-const url = process.env.NEXT_PUBLIC_SITE_URL
+// URL validation function
+function isValidUrl(string: string) {
+  try {
+    new URL(string);
+    return true;
+  } catch (_) {
+    return false;
+  }
+}
+
+// Get and validate the URL
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+if (!isValidUrl(siteUrl)) {
+  throw new Error(`Invalid URL in environment variables: ${siteUrl}`);
+}
 
 export const metadata: Metadata = {
   title,
   description,
   category: 'technology',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
+  metadataBase: new URL(siteUrl),
   alternates: {
-    canonical: url,
+    canonical: '/',
   },
   openGraph: {
     title,
     description,
-    url,
+    url: siteUrl,
     siteName: 'John Doe Portfolio',
     type: 'website',
   },
