@@ -23,17 +23,19 @@ const Hero = () => {
           </h2>
 
           <div className="mt-6 flex flex-wrap gap-6">
+           <a
+  href="#contact"
+  aria-label="Connect with me"
+  className="bg-accent min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#00071E]">
+  Hire Me
+</a>
+
             <a
-              href="#"
-              aria-label="Connect with me"
-              className="bg-accent min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#00071E]">
-              Hire Me
-            </a>
-            <a
-              href="#"
-              aria-label="View LinkedIn Profile"
+              href="/resume.pdf"
+  target="_blank"
+              aria-label="Get Resume"
               className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm">
-              LinkedIn Profile
+              View Resume
             </a>
           </div>
         </div>
